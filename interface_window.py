@@ -25,7 +25,7 @@ class Gui:
             .place(x=20, y=130)
         self.check_script = ttk.Combobox(width=70,
                                          values=("1.Скріпт на ардуіно відправляє виміряну напругу в серіал.",
-                                               "2.Працює скрипт на Пайтоні і спілкується з ардуіно через біліотеку Firmata"))
+                                               "2.Працює скрипт на Пайтоні і спілкується з ардуіно через бібліотеку Firmata"))
         self.check_script.place(x=370, y=130)
 
         tk.Label(self.win, text="Виберіть NPLС: ", font='Arial 14', bg='#EBD4B5')\
@@ -75,7 +75,7 @@ class Gui:
 
     def reset(self):
         self.check_port = ttk.Combobox(values=get_connected_ports())
-        self.check_port.grid(row=1, column=1, sticky='w')
+        self.check_port.place(x=370, y=80)
 
     def run(self):
         self.win.mainloop()
